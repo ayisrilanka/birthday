@@ -36,9 +36,10 @@
       50% { transform: translateY(-20px); }
       100% { transform: translateY(0); }
     }
+    
     .bubble {
       position: absolute;
-      border-radius: 30%;
+      border-radius: 50%;
       background: rgba(255, 255, 255, 0.4);
       animation: rise 10s infinite;
     }
@@ -58,11 +59,11 @@
       color: #ff8fa3;
       font-size: 20px;
       position: absolute;
-      animation: fall 3s linear infinite;
+      animation: fall 5s linear infinite;
     }
 
     @keyframes fall {
-      70% {
+      100% {
         transform: translateY(-100px) rotate(0deg);
         opacity: 1;
       }
@@ -84,7 +85,7 @@
 
   <!-- Bubble animation -->
   <script>
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 20; i++) {
       const bubble = document.createElement("div");
       bubble.className = "bubble";
       bubble.style.width = `${Math.random() * 20 + 10}px`;
@@ -111,7 +112,7 @@
 
   <!-- Background Music -->
   <audio autoplay loop>
-    <source src="https://pixabay.com/music/modern-classical-calm-soft-piano-music-337463" type="audio">
+    <source src="https://pixabay.com/music/modern-classical-calm-soft-piano-music-337463" vol=45%>
   </audio>
 </body>
 </html>
