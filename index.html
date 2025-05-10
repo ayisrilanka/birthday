@@ -26,9 +26,19 @@
       color: #5c5c5c;
     }
 
+    .jellyfish
+      margin-top: 40px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
     .bubble {
       position: absolute;
-      border-radius: 75%;
+      border-radius: 30%;
       background: rgba(255, 255, 255, 0.4);
       animation: rise 10s infinite;
     }
@@ -36,7 +46,7 @@
     @keyframes rise {
       from {
         bottom: 0;
-        opacity: 100;
+        opacity: 0.1;
       }
       to {
         top: 100%;
@@ -52,7 +62,7 @@
     }
 
     @keyframes fall {
-      40% {
+      70% {
         transform: translateY(-100px) rotate(0deg);
         opacity: 1;
       }
